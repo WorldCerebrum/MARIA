@@ -1,0 +1,16 @@
+{
+  "name": "MARIA",
+  "version": "0.1.0",
+  "description": "Artificial Intelligence Research Assistant for Medicine",
+  "dependencies": {
+    "truffle-default-builder": "^2.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "Salman Rahim, ",
+  "license": "MIT License",
+  "repository": {
+    "url": "https://github.gatech.edu/gt-hit-spring2018/Artificial-Intelligence-Research-Assitant-for-Medicine"
+  }
+}

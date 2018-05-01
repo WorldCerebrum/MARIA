@@ -1,0 +1,6 @@
+FROM ipfs/go-ipfs:latest
+COPY scripts /usr/local/bin/
+#EXPOSE 4001 5001 8080
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/start_ipfs.sh"]
+# Execute the daemon subcommand by default
+CMD ["daemon", "--migrate=true"]

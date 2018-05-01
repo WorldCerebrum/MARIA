@@ -1,0 +1,3 @@
+npm -g install iexec 
+(then cd into this iexec folder and run):
+npm install (to get the iexec-oracle-contract dependency)

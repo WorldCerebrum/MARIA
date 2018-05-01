@@ -1,0 +1,22 @@
+FROM node:6.13.1-alpine
+
+RUN apk add --no-cache bash
+
+ADD ./iexec/package.json /tmp/package.json
+ADD ./iexec/package-lock.json /tmp/package-lock.json
+
+RUN apk --no-cache --virtual build-dependencies add \
+    git \
+    python \
+    make \
+    g++ \
+    && npm install -g iexec \
+    && cd /tmp && npm install \
+    && apk del build-dependencies
+
+RUN mkdir -p /var/www && cp -a /tmp/node_modules /var/www/
+
+WORKDIR /var/www
+ADD ./iexec/ /var/www
+
+ENTRYPOINT ["/bin/bash"]

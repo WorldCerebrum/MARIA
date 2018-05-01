@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "main": "iexec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "iexec-oracle-contract": "^1.1.5"
+  }
+}

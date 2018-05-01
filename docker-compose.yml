@@ -1,0 +1,50 @@
+version: '2'
+services:
+  mariatestrpc:
+    image: maria/mariatestrpc
+    build:
+      context: .
+      dockerfile: ./docker/testrpc/dockerfile
+    ports:
+      - 8545:8545
+    networks:
+      - dapp-network
+
+  mariaipfs:
+    image: maria/mariaipfs
+    build:
+      context: ./docker/ipfs/
+      dockerfile: dockerfile
+    ports:
+      - 4001:4001
+      - 5001:5001
+      - 8080:8080
+    volumes:
+      - /data/ipfs/
+    networks:
+      - dapp-network
+
+  mariatruffle:
+    image: maria/mariatruffle
+    build:
+      context: .
+      dockerfile: ./docker/truffle/dockerfile
+    ports:
+      - 8081:8081
+    networks:
+      - dapp-network
+    depends_on:
+      - mariatestrpc
+      - mariaipfs
+  
+  mariaiexec:
+    image: maria/mariaiexec
+    build:
+      context: .
+      dockerfile: ./docker/iexec/dockerfile
+    networks:
+      - dapp-network
+
+networks:
+  dapp-network:
+    driver: bridge
