@@ -200,5 +200,5 @@ RTS               NAMES
 1bff06d36c67        hello-world         "/hello"                 About an hour ago   Exited (0) About an hour ago
                   festive_lalande
 ```
-
-Contributors are welcome!
+Contributors: Salman Rahim, Gleb Kharko, Charles Tsang, Zachary Dan, Ryan Dymock, Andrew Shannon. 
+More contributors are welcome!
