@@ -201,4 +201,4 @@ RTS               NAMES
                   festive_lalande
 ```
 
-Contributors: Salman Rahim, Gleb Kharko, Charles Tsang, Zachary Dan, Ryan Dymock, Andrew Shannon
+Contributors are welcome!
